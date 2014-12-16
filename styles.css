@@ -5,8 +5,6 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
-  background: url(img/floor.jpg) 100%;
-  background-repeat: no-repeat;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -49,12 +47,10 @@ body, a:link, a:visited, a:active{
   width: 100%;
 }
 
-.breaker {
-  background: url(img/breaker.gif) no-repeat;
+.people {
   position: absolute;
-  height: 300px;
-  width: 300px;
-  background-size: 300px 300px;
+  height: 100%;
+  width: 100%;
   transition: all 2s ease-in-out;
 }
 .bear {
@@ -81,6 +77,36 @@ body, a:link, a:visited, a:active{
 .taco {
   background: url(img/taco.gif) no-repeat;
 }
+.breaker {
+  background: url(img/breaker.gif) no-repeat;
+  background-size: 20%;
+
+}
+.elvis {
+  background: url(img/elvis.gif) no-repeat;
+}
+.hula {
+  background: url(img/hula.gif) no-repeat;
+}
+.spiderman {
+  background: url(img/spiderman.gif) no-repeat;
+}
+.floor {
+  background: url(img/floor.jpg) 100% no-repeat;
+}
+.space {
+  background: url(img/space.jpg) 100% no-repeat;
+}
+.mordor {
+  background: url(img/mordor.jpg) 100% no-repeat;
+}
+.beach {
+  background: url(img/beach.jpg) 100% no-repeat;
+}
+.clouds {
+  background: url(img/cloud.jpg) 100% no-repeat;
+}
+
 
 
 

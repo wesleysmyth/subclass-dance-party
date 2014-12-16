@@ -1,5 +1,14 @@
 $(document).ready(function(){
   window.dancers = [];
+  window.backgrounds = ['floor', 'space', 'beach', 'clouds'];
+  $("body").addClass(backgrounds[0]);
+
+  setInterval(function () {
+    var bkgnd = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+    var background = 'url("img/' + bkgnd + '.jpg")';
+    $("body").css("background-image", background);
+    console.log("Changing");
+  }, 8000);
 
   $(".addDancerButton").on("click", function(event){
     /* This function sets up the click handlers for the create-dancer
