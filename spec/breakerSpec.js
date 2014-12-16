@@ -14,12 +14,15 @@ describe("breaker", function() {
     expect(breakDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  it("should have an animals property that is an array with at least one element", function() {
-    expect(breakDancer.animals).to.be.an.instanceof(Array);
-    expect(breakDancer.animals.length > 0).to.be.true;
+  it("should have a spin method", function() {
+    expect(breakDancer.spin).to.be.an.instanceof(Function);
   });
 
-  describe("dance", function(){
+  it("should have at least one dancer", function () {
+    expect(breakDancer.breakers.length > 0).to.be.true;
+  });
+
+  describe("breaker", function(){
     it("should call step at least once per second", function(){
       sinon.spy(breakDancer, "step");
       expect(breakDancer.step.callCount).to.be.equal(0);
