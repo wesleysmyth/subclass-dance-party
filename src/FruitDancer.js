@@ -7,4 +7,3 @@ var FruitDancer = function (top, left, timeBetweenSteps) {
 
 FruitDancer.prototype = Object.create(Dancer.prototype);
 FruitDancer.prototype.constructor = FruitDancer;
-

@@ -1,14 +1,20 @@
 $(document).ready(function(){
   window.dancers = [];
-  window.backgrounds = ['floor', 'space', 'beach', 'clouds'];
-  $("body").addClass(backgrounds[0]);
+  window.counter = 0;
+  window.backgrounds = ['space', 'beach'];
+  $("html").css("background", 'url("img/floor.jpg") 100% no-repeat');
 
-  setInterval(function () {
-    var bkgnd = backgrounds[Math.floor(Math.random() * backgrounds.length)];
-    var background = 'url("img/' + bkgnd + '.jpg")';
-    $("body").css("background-image", background);
-    console.log("Changing");
-  }, 8000);
+  $('.switch').on('click', function () {
+    if (counter % 2 === 0) {
+      counter++;
+      var bkgnd = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+      var background = 'url("img/' + bkgnd + '.jpg")';
+      $("html").css("background-image", background);
+    } else {
+      counter++;
+      $("html").css("background-image", 'url("img/floor.jpg")');
+    }
+  });
 
   $(".addDancerButton").on("click", function(event){
     /* This function sets up the click handlers for the create-dancer
@@ -30,8 +36,8 @@ $(document).ready(function(){
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
-    var top = $("body").height() * Math.random();
-    var left = $("body").width() * Math.random();
+    var top = screen.height * Math.random();
+    var left = screen.width * Math.random();
 
     var dancer = new dancerMakerFunction(top, left, Math.random() * 1000);
 
@@ -61,10 +67,21 @@ $('#button').on('click', function () {
   for (var i = 0; i < dancers.length; i++) {
     dancers[i][0].lineUp();
   }
+  $(".backtofloor").fadeIn();//.css("display", "inline-block");
 });
 
 $('#interact').on('click', function () {
   interact();
+});
+
+$('.backtofloor').on('click', function(){
+  for (var i = 0; i < dancers.length; i++) {
+    dancers[i][0].$node.removeClass('lineup');
+    var top = $("body").height() * Math.random();
+    var left = $("body").width() * Math.random();
+    dancers[i][0].setPosition(top, left, Math.random() * 1000); //set Position
+  }
+  $(".backtofloor").fadeOut();
 });
 
 var interact = function () {
