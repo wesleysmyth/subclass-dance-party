@@ -30,9 +30,21 @@ $(document).ready(function(){
       Math.random() * 1000 //random interval
     );
 
+    dancers.push(dancer); //add to the global array object
+
     dancer.setPosition(top, left);
     dancer.step();
     $('body').append(dancer.$node); //add node to the body
+
+    //Adds a hover effect for animal class
+    $('.animal').on('mouseover', function (e) {
+      $(this).addClass('roar');
+    });
+
+    $('.animal').on('mouseleave', function (e) {
+      $(this).removeClass('roar');
+    });
+
   });
 });
 
