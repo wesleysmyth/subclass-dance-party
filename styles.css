@@ -6,6 +6,7 @@ body{
   background-color:#444;
   font-size: 18px;
   background: url(img/floor.jpg) 100%;
+  background-repeat: no-repeat;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -33,26 +34,54 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+  transition: all 2s ease-in-out;
 }
 .fruit {
-  background: url(img/giphy.gif) no-repeat;
   position:absolute;
-  height: 60px;
-  width: 60px;
-  background-size: 60px 60px;
+  transition: all 2s ease-in-out;
+  height: 100%;
+  width: 100%;
 }
 .animal {
-  background: url(img/tiger.gif) no-repeat;
   position: absolute;
-  height: 100px;
-  width: 100px;
-  background-size: 100px 100px;
+  transition: all 2s ease-in-out;
+  height: 100%;
+  width: 100%;
+}
+
+.breaker {
+  background: url(img/breaker.gif) no-repeat;
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  background-size: 300px 300px;
+  transition: all 2s ease-in-out;
+}
+.bear {
+  background: url(img/bear.gif) no-repeat;
+  background-size: 50% !important;
+  width: 200px;
+  height: 200px;
+}
+.tiger {
+  background: url(img/tiger.gif) no-repeat;
 }
 .roar {
   background: url(img/ron.gif) no-repeat;
-  position: absolute;
-  height: 100px;
-  width: 100px;
-  background-size: 100px 100px;
 }
+.giraffe {
+  background: url(img/dancing_giraffes.gif) no-repeat;
+}
+.pickle {
+  background: url(img/dancing_pickle.gif) no-repeat;
+}
+.banana {
+  background: url(img/giphy.gif) no-repeat;
+}
+.taco {
+  background: url(img/taco.gif) no-repeat;
+}
+
+
+
 

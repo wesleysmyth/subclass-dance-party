@@ -33,15 +33,16 @@ $(document).ready(function(){
 
 
     $('body').append(dancer.$node); //add node to the body
-  });
 
-  //Adds a hover effect for animal class
-  $('.animal').on('mouseover', function (e) {
-    $(this).addClass('roar');
-  });
+    //Adds a hover effect for animal class
+    $('.tiger').on('mouseover', function () {
+      $(this).addClass('roar');
+    });
 
-  $('.animal').on('mouseleave', function (e) {
-    $(this).removeClass('roar');
+    $('.tiger').on('mouseleave', function () {
+      $(this).removeClass('roar');
+    });
+
   });
 
 });
