@@ -31,7 +31,9 @@ body, a:link, a:visited, a:active{
 }
 .topbar{
   height:32px;
-  background-color: #555;
+  padding-top: 8px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 .title{
   background-color: #777;
@@ -233,8 +235,7 @@ a,button {
 .spin {
   transform: rotate(360deg);
 }
-
-
-
-
-
+audio {
+  float: right;
+  padding-right: 20px;
+}
