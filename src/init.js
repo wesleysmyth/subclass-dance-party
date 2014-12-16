@@ -32,6 +32,7 @@ $(document).ready(function(){
 
     dancers.push(dancer); //add to the global array object
 
+
     dancer.setPosition(top, left);
     dancer.step();
     $('body').append(dancer.$node); //add node to the body
@@ -46,5 +47,13 @@ $(document).ready(function(){
     });
 
   });
+});
+
+//Lineup function
+$('#button').on('click', function () {
+  for (var i = 0; i < dancers.length; i++) {
+    console.dir(dancers[i]);
+    dancers[i].lineUp();
+  }
 });
 
